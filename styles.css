@@ -23,10 +23,12 @@ body {
   color: #ccc;
   text-decoration: none;
   margin-left: 20px;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .top-nav a:hover {
   color: white;
+  transform: translateY(-2px);
 }
 
 /* HERO */
@@ -82,55 +84,51 @@ body {
 }
 
 
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-}
-
-.btn {
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.primary {
-  background: #ff5a3c;
-  color: white;
-}
-
-.secondary {
-  border: 1px solid #666;
-  color: #ccc;
-}
-
-
-.bottom-sections {
+.tabs {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  margin: 50px auto;
-  flex-wrap: wrap;
+  margin: 50px 0;
 }
 
-.info-card {
-  width: 250px;
-  padding: 25px;
-  border-radius: 15px;
-
+.tab-button {
   background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-
   border: 1px solid rgba(255,255,255,0.2);
-  color: white;
-  text-decoration: none;
-
-  transition: 0.3s;
+  color: #ccc;
+  padding: 15px 30px;
+  margin: 0 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
 }
 
-.info-card:hover {
-  transform: translateY(-8px);
+.tab-button.active {
+  background: rgba(255,255,255,0.1);
+  color: white;
   border: 1px solid white;
+}
+
+.tab-button:hover {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.tab-content {
+  position: relative;
+}
+
+.tab-pane {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tab-pane.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
@@ -162,10 +160,12 @@ body {
   color: #222;
   font-weight: bold;
 
-  transition: 0.3s;
+  transition: all 0.4s ease;
+  cursor: pointer;
 }
 
 .project:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) rotate(1deg);
   background: linear-gradient(135deg, #fa709a, #fee140);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
