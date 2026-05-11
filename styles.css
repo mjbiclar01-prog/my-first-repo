@@ -1,18 +1,17 @@
-/* RESET */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY BACKGROUND */
 body {
   font-family: 'Poppins', sans-serif;
   background: radial-gradient(circle at top, #0b1a2a, #050b16);
   color: white;
 }
 
-/* NAV */
+
 .top-nav {
   display: flex;
   justify-content: space-between;
