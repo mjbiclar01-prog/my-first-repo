@@ -57,6 +57,20 @@ a:focus {
   text-decoration: underline;
 }
 
+.contact-link {
+  color: #ff6a88;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.contact-link:hover {
+  color: #ff8aaa;
+  text-shadow: 0 0 12px rgba(255, 106, 136, 0.5);
+  border-bottom-color: #ff6a88;
+}
+
 .bottom-sections {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
