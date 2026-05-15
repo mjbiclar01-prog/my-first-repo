@@ -34,3 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     revealItems.forEach(item => revealObserver.observe(item));
 });
+document.querySelectorAll('.card, .info-card').forEach(section => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(20px)';
+    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(section);
+});
