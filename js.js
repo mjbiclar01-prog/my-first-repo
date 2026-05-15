@@ -20,3 +20,11 @@ document.querySelectorAll('.info-card, .project a, .top-nav a').forEach(button =
         }, 150);
     });
 });
+
+function switchTab(tabId) {
+    // Remove active class from all tabs
+    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+    // Add active to the corresponding tab button
+    const tabButton = document.querySelector(`.tab-button[data-tab="${tabId}"]`);
+    if (tabButton) tabButton.classList.add('active');
+
