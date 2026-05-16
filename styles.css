@@ -48,11 +48,21 @@ a:visited,
 a:active {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:hover,
 a:focus {
   color: #fff;
+}
+
+.info-card,
+.primary-button,
+.secondary-button,
+.project a,
+.contact-link {
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .top-nav {
@@ -194,6 +204,14 @@ main {
   filter: brightness(1.04);
 }
 
+.primary-button:active,
+.secondary-button:active,
+.project a:active,
+.contact-link:active {
+  transform: translateY(0) scale(0.98);
+  filter: brightness(0.95);
+}
+
 .hero-image {
   position: relative;
   align-self: center;
@@ -230,6 +248,10 @@ main {
   transform: translateY(-8px);
   border-color: rgba(255,255,255,0.16);
   background: rgba(255,255,255,0.12);
+}
+
+.info-card:active {
+  transform: translateY(-2px) scale(0.99);
 }
 
 .info-card h3 {
