@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -13,16 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    document.querySelectorAll('.info-card, .project a, .top-nav a').forEach(button => {
+    document.querySelectorAll('.info-card, .project a, .top-nav a, .primary-button, .secondary-button').forEach(button => {
         button.addEventListener('click', function() {
-            this.style.transform = 'scale(0.95)';
+            this.style.transform = 'scale(0.96)';
             setTimeout(() => {
                 this.style.transform = '';
             }, 150);
         });
     });
 
-    const revealItems = document.querySelectorAll('.card, .info-card, .project');
+    const revealItems = document.querySelectorAll('.reveal-item, .hero-card, .info-card, .project');
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -33,10 +32,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.2 });
 
     revealItems.forEach(item => revealObserver.observe(item));
-});
-document.querySelectorAll('.card, .info-card').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(section);
 });

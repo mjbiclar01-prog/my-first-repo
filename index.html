@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mac Biclar | Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script src="js.js" defer></script>
 </head>
 <body>
-
 
 <header class="top-nav">
   <h2 class="logo">Mac Biclar</h2>
@@ -20,103 +20,92 @@
   </nav>
 </header>
 
-
-<section id="hero">
-  <div class="hero-card">
-    <div class="hero-text">
-      <h1>Hi, I'm Mac Julian Francisco Biclar</h1>
-      <p class="tagline">Web Designer</p>
-      <p>I create clean, responsive, and modern websites.</p>
+<main>
+  <section id="hero">
+    <div class="hero-card">
+      <div class="hero-copy">
+        <span class="eyebrow">Portfolio</span>
+        <h1>Hi, I'm Mac Julian Francisco Biclar</h1>
+        <p class="hero-tagline">Crafting clean and engaging websites with modern design.</p>
+        <p>As a student developer, I combine strong visuals with responsive layouts to build sites that feel professional and easy to use.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="primary-button">See My Work</a>
+          <a href="#contact" class="secondary-button">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="image/pic.jpeg" alt="Mac Biclar portrait">
+      </div>
     </div>
+  </section>
 
-    <div class="hero-image">
-    <img src="image/pic.jpeg" alt="pic">
+  <section class="bottom-sections">
+    <a href="#about" class="info-card">
+      <h3>About Me</h3>
+      <p>Learn more about my background and what I build.</p>
+    </a>
+    <a href="#projects" class="info-card">
+      <h3>Projects</h3>
+      <p>Explore the websites and apps I created.</p>
+    </a>
+    <a href="#skills" class="info-card">
+      <h3>Skills</h3>
+      <p>Discover the tools and languages I work with.</p>
+    </a>
+    <a href="#contact" class="info-card">
+      <h3>Contact</h3>
+      <p>Send a message or connect on GitHub.</p>
+    </a>
+  </section>
+
+  <section id="about" class="card reveal-item">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate student developer who enjoys building websites and learning new technologies. I want to grow my web development skills and become part of the industry, contributing to the community with user-friendly, modern projects.
+    </p>
+  </section>
+
+  <section id="skills" class="card reveal-item">
+    <h2>Languages I Use</h2>
+    <p>These are the main languages and technologies I build with today.</p>
+    <div class="skill-grid">
+      <span class="skill-badge">HTML</span>
+      <span class="skill-badge">CSS</span>
+      <span class="skill-badge">JavaScript</span>
+      <span class="skill-badge">Python</span>
+      <span class="skill-badge">Java</span>
+      <span class="skill-badge">C++</span>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<section class="bottom-sections">
-
-  <a href="#about" class="info-card">
-    <h3>About Me</h3>
-    <p>Learn more about my background and skills.</p>
-  </a>
-
-  <a href="#projects" class="info-card">
-    <h3>Projects</h3>
-    <p>See websites and apps I created.</p>
-  </a>
-
-  <a href="#skills" class="info-card">
-    <h3>Skills</h3>
-    <p>Discover the programming languages I use.</p>
-  </a>
-
-  <a href="#contact" class="info-card">
-    <h3>Contact</h3>
-    <p>Get in touch with me here.</p>
-  </a>
-
-</section>
-
-
-<section id="about" class="card">
-  <h2>About Me</h2>
-  <p>
-    I am a passionate student developer who enjoys building websites
-    and learning new technologies and i am willing to grow and improve my skill in web development and programming. because i want to be a 
-    successful web developer in the future and i want to be part of the web development industry and i want to contiribute
-    to the web development community.
-  </p>
-</section>
-
-<section id="skills" class="card">
-  <h2>Languages I Use</h2>
-  <p>These are the main languages and technologies I build with today.</p>
-  <div class="skill-grid">
-    <span class="skill-badge">HTML</span>
-    <span class="skill-badge">CSS</span>
-    <span class="skill-badge">JavaScript</span>
-    <span class="skill-badge">Python</span>
-    <span class="skill-badge">Java</span>
-    <span class="skill-badge">C++</span>
-  </div>
-</section>
-
-<section id="projects" class="card">
-  <h2>Projects</h2>
-
-  <div class="project-grid">
-
-    <div class="project">
-      <h3>Portfolio Website</h3>
-      <p>My personal portfolio built using HTML, CSS & JavaScript.</p>
-      <a href="https://github.com/mjbiclar01-prog/my-first-repo.git" target="_blank">View Project</a>
+  <section id="projects" class="card reveal-item">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>My personal portfolio built using HTML, CSS & JavaScript.</p>
+        <a href="https://github.com/mjbiclar01-prog/my-first-repo.git" target="_blank">View Project</a>
+      </div>
+      <div class="project">
+        <h3>Dentist Appointment</h3>
+        <p>A simple dentist appointment app created with JavaScript.</p>
+        <a href="https://drive.google.com/drive/folders/1fQp78Y3sRhoRNzJDD13DnJHBbaoSbV3R?usp=drive_link" target="_blank">View Project</a>
+      </div>
+      <div class="project">
+        <h3>To-Do List</h3>
+        <p>A task manager app for organizing daily work and goals.</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
     </div>
+  </section>
 
-    <div class="project">
-      <h3>Dentist Appointment</h3>
-      <p>A simple dentist application using JavaScript.</p>
-      <a href="https://drive.google.com/drive/folders/1fQp78Y3sRhoRNzJDD13DnJHBbaoSbV3R?usp=drive_link" target="_blank">View Project</a>
-    </div>
-
-    <div class="project">
-      <h3>To-Do List</h3>
-      <p>A task manager app to organize daily tasks.</p>
-      <a href="#" target="_blank">View Project</a>
-    </div>
-
-  </div>
-</section>
-
-
-<section id="contact" class="card">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:mjbiclar01@gmail.com" class="contact-link">mjbiclar01@gmail.com</a></p>
-  <p>GitHub: <a href="https://github.com/mjbiclar01-prog/Mac" target="_blank" class="contact-link">mjbiclar01-prog/Mac</a></p>
-  <p>Facebook: <a href="https://www.facebook.com/onlywithShin" target="_blank" class="contact-link">https://www.facebook.com/onlywithShin</a></p>
-</section>
+  <section id="contact" class="card reveal-item">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:mjbiclar01@gmail.com" class="contact-link">mjbiclar01@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/mjbiclar01-prog/Mac" target="_blank" class="contact-link">mjbiclar01-prog/Mac</a></p>
+    <p>Facebook: <a href="https://www.facebook.com/onlywithShin" target="_blank" class="contact-link">onlywithShin</a></p>
+  </section>
+</main>
 
 </body>
 </html>
