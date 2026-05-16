@@ -7,11 +7,14 @@
 :root {
   --bg: #07111d;
   --surface: rgba(255,255,255,0.08);
+  --surface-soft: rgba(255,255,255,0.06);
   --surface-strong: rgba(255,255,255,0.14);
   --text: #eef3ff;
   --muted: #b3bdcf;
+  --muted-soft: rgba(179,189,207,0.78);
   --accent: #ff6a88;
   --accent-soft: #ff8aa1;
+  --shadow: 0 22px 60px rgba(0,0,0,0.25);
   --card-radius: 28px;
 }
 
@@ -54,6 +57,17 @@ a:active {
 a:hover,
 a:focus {
   color: #fff;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+section {
+  scroll-margin-top: 100px;
 }
 
 .info-card,
@@ -121,11 +135,19 @@ main {
   width: min(1140px, 92vw);
   padding: 44px;
   border-radius: var(--card-radius);
-  background: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.1);
   border: 1px solid rgba(255,255,255,0.14);
-  box-shadow: 0 24px 80px rgba(0,0,0,0.28);
+  box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
   overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  will-change: transform;
+}
+
+.hero-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 90px rgba(0,0,0,0.32);
+  background: rgba(255,255,255,0.14);
 }
 
 .hero-card::after {
@@ -183,7 +205,7 @@ main {
   border-radius: 999px;
   padding: 16px 28px;
   font-weight: 700;
-  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.24s cubic-bezier(.22,.61,.36,1), filter 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
 }
 
 .primary-button {
@@ -201,7 +223,16 @@ main {
 .primary-button:hover,
 .secondary-button:hover {
   transform: translateY(-2px);
-  filter: brightness(1.04);
+  filter: brightness(1.05);
+}
+
+.primary-button:focus-visible,
+.secondary-button:focus-visible,
+.project a:focus-visible,
+.contact-link:focus-visible,
+.info-card:focus-visible {
+  outline: 3px solid rgba(255,106,136,0.35);
+  outline-offset: 4px;
 }
 
 .primary-button:active,
@@ -209,7 +240,7 @@ main {
 .project a:active,
 .contact-link:active {
   transform: translateY(0) scale(0.98);
-  filter: brightness(0.95);
+  filter: brightness(0.92);
 }
 
 .hero-image {
@@ -224,6 +255,12 @@ main {
   border-radius: 42% 58% 52% 48% / 45% 45% 55% 55%;
   border: 4px solid rgba(255,255,255,0.12);
   box-shadow: 0 26px 70px rgba(0,0,0,0.28);
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.hero-image img:hover {
+  transform: translateY(-4px) scale(1.02);
+  filter: saturate(1.05);
 }
 
 .bottom-sections {
@@ -348,11 +385,13 @@ main {
   background: rgba(255,106,136,0.16);
   color: #ffdde4;
   font-weight: 700;
-  transition: background 0.2s ease;
+  transition: transform 0.24s ease, background 0.24s ease, box-shadow 0.24s ease;
 }
 
 .project a:hover {
+  transform: translateY(-2px);
   background: rgba(255,106,136,0.26);
+  box-shadow: 0 14px 30px rgba(255,106,136,0.18);
 }
 
 .contact-link {
